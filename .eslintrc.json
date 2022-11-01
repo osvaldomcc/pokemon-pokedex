@@ -1,0 +1,16 @@
+{
+  "extends": ["react-app"],
+  "rules": {
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "indent": ["error", 2],
+    "no-multi-spaces": ["error"],
+    "no-trailing-spaces": ["error"],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ]
+  }
+}
