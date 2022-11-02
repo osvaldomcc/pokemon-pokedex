@@ -10,25 +10,34 @@
     "prepare": "husky install",
     "format": "prettier --write",
     "lint": "eslint . --cache",
-    "lint:fix": "eslint . --cache --fix"
+    "lint:fix": "eslint . --cache --fix",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@testing-library/user-event": "^14.4.3",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "@vitejs/plugin-react": "^2.2.0",
     "eslint": "8.0.0",
     "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-flowtype": "8.0.3",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.1",
     "install-peers": "^1.0.4",
+    "jsdom": "^20.0.2",
     "lint-staged": "^13.0.3",
     "prettier": "2.7.1",
     "typescript": "^4.6.4",
-    "vite": "^3.2.0"
+    "vite": "^3.2.0",
+    "vitest": "^0.24.5"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
