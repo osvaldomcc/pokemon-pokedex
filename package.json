@@ -31,7 +31,7 @@
     "vite": "^3.2.0"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
+    "**/*.{js,jsx,ts,tsx}": [
       "yarn lint:fix"
     ],
     "**/*.{js,jsx,ts,tsx,json,css}": [
