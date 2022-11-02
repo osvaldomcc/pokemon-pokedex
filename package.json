@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "format": "prettier --write \"**/*.(ts|tsx|js|jsx|json|css)\"",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint": "eslint . --ext .js --ext .jsx --ext .ts --ext .tsx --cache",
+    "lint:fix": "eslint . --ext .js --ext .jsx --ext .ts --ext .tsx --cache --fix"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -29,12 +29,5 @@
     "prettier": "2.7.1",
     "typescript": "^4.6.4",
     "vite": "^3.2.0"
-  },
-  "lint-staged": {
-    "**/*": [
-      "yarn lint:fix",
-      "yarn format",
-      "yarn lint"
-    ]
   }
 }
