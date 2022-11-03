@@ -1,9 +1,8 @@
 {
-  "extends": ["react-app"],
+  "extends": ["react-app", "prettier"],
   "rules": {
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
-    "indent": ["error", 2],
     "no-multi-spaces": ["error"],
     "no-trailing-spaces": ["error"],
     "no-var": ["error"],
