@@ -2,7 +2,7 @@ interface IProps {
   className?: string
 }
 
-export const ArrowRightLeft = ({ className }: IProps) => {
+export const ArrowIconTop = ({ className }: IProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ export const ArrowRightLeft = ({ className }: IProps) => {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"
+        d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"
       />
     </svg>
   )
