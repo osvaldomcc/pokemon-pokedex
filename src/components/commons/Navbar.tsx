@@ -14,7 +14,12 @@ export const Navbar = () => {
         <div className="container">
           <div className="flex items-center justify-between px-10">
             <button onClick={handleHome}>
-              <LazyImage width={35} height={35} alt="bulba" src={PokeIcon} />
+              <LazyImage
+                width={35}
+                height={35}
+                alt="poke-icon"
+                src={PokeIcon}
+              />
             </button>
             <SwitchTheme />
           </div>

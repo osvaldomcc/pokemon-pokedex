@@ -5,22 +5,21 @@ interface IProps {
   className?: string
   styles?: React.CSSProperties
   children: React.ReactNode | React.ReactNode[]
+  [attribute: string]: any
 }
 
 const commonClasses: string = 'text-blueDark dark:text-gray-300'
 
-export const Typography = ({
-  variant,
-  className,
-  styles,
-  children,
-}: IProps) => {
+export const Typography = (props: IProps) => {
+  const { variant, className, styles, children, ...rest } = props
+
   switch (variant) {
     case 'h1':
       return (
         <h1
           className={`font-bold text-2xl ${commonClasses} ${className}`}
           style={styles}
+          {...rest}
         >
           {children}
         </h1>
@@ -30,13 +29,14 @@ export const Typography = ({
         <h2
           className={`font-semibold text-md ${commonClasses} ${className}`}
           style={styles}
+          {...rest}
         >
           {children}
         </h2>
       )
     default:
       return (
-        <p className={`${commonClasses} ${className}`} style={styles}>
+        <p className={`${commonClasses} ${className}`} style={styles} {...rest}>
           {children}
         </p>
       )

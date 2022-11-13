@@ -19,7 +19,11 @@ export const ListItemPokemon = ({ className, pokemon }: IProps) => {
   }
 
   return (
-    <button onClick={handlePokemon} onMouseEnter={handleMouseEnter}>
+    <button
+      onClick={handlePokemon}
+      onMouseEnter={handleMouseEnter}
+      className="transform transition duration-500 hover:scale-105"
+    >
       <Card
         className={`flex flex-col justify-center items-center py-4 md:h-56 ${className}`}
         imgColor={pokemon.image}
@@ -38,7 +42,7 @@ export const ListItemPokemon = ({ className, pokemon }: IProps) => {
         </Typography>
       </Card>
       {/* Description */}
-      <div className="hidden md:block mt-1">
+      <div className="hidden md:block mt-1" data-testid="description-section">
         <div className="flex justify-between mx-2 items-center">
           <Typography>n{pokemon.id}</Typography>
           <span className="bg-green-500 rounded text-xs text-white px-2 py-1">

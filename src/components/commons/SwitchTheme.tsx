@@ -31,7 +31,7 @@ export const SwitchTheme = () => {
           <SunIcon />
         </button>
       ) : (
-        <button onClick={() => handleClick('dark')}>
+        <button onClick={() => handleClick('dark')} data-testid="moon-btn">
           {' '}
           <MoonIcon className="h-5 w-5" />
         </button>

@@ -9,11 +9,19 @@ interface IProps extends IPokemonDetailProps {
 export const PokemonDetailHeader = ({ pokemon, onBackPress }: IProps) => {
   return (
     <div className="flex items-center mb-5">
-      <button className="text-blueDark md:hidden" onClick={onBackPress}>
+      <button
+        className="text-blueDark md:hidden"
+        onClick={onBackPress}
+        data-testid="backButton"
+      >
         <LeftArrowIcon className="dark:text-gray-300" />
       </button>
       <div className="flex flex-1 mr-8 flex-col items-center md:mr-0 md:items-start">
-        <Typography variant="h1" className="text-3xl">
+        <Typography
+          variant="h1"
+          className="text-3xl"
+          data-testid="pokemon-name"
+        >
           {pokemon?.name}
         </Typography>
         <Typography variant="h2" className="text-md">

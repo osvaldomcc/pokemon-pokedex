@@ -6,7 +6,10 @@ export const MainLayout = () => {
     <>
       <ScrollRestoration
         getKey={(location, matches) => {
-          return location.pathname
+          const paths = ['/']
+          return paths.includes(location.pathname)
+            ? location.pathname
+            : location.key
         }}
       />
       <Navbar />

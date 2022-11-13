@@ -28,6 +28,9 @@ export const PokemonDetail = () => {
 
   return (
     <ErrorBoundary error={pokemonData.error as AxiosError}>
+      <span className="hidden" data-testid="poke-params">
+        {name}
+      </span>
       {pokemonData.isLoading && <Loader />}
       <PokemonDetailMeta pokemon={pokemon} />
       <div className="hidden md:block">

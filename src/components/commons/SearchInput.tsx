@@ -30,10 +30,11 @@ export const SearchInput = ({ className, labelClassName }: IProps) => {
         <Typography>Search for a pokemon by name or id</Typography>
       </label>
       <div className="flex justify-between items-center gap-2 mt-4 bg-lightGray px-3 py-1 rounded-md">
-        <button type="submit">
+        <button type="submit" data-testid="search-button">
           <SearchIcon className="w-5 h-5 text-blueDark" />
         </button>
         <input
+          aria-placeholder="pikachu"
           value={query}
           onChange={handleChange}
           autoFocus
