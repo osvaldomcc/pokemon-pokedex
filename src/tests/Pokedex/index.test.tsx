@@ -1,10 +1,24 @@
 import { cleanup, fireEvent, screen, waitFor } from '@testing-library/react'
-import { describe, it } from 'vitest'
-import { renderWithClient } from '../../helpers/testUtils'
+import { describe, it, vi } from 'vitest'
+import { renderWithClient } from '@/helpers/testUtils'
 import { Pokedex } from '@/pages'
 
 describe('Pokemon', () => {
-  afterEach(cleanup)
+  beforeEach(() => {
+    const IntersectionObserverMock = vi.fn(() => ({
+      disconnect: vi.fn(),
+      observe: vi.fn(),
+      takeRecords: vi.fn(),
+      unobserve: vi.fn(),
+    }))
+
+    vi.stubGlobal('IntersectionObserver', IntersectionObserverMock)
+  })
+
+  afterEach(() => {
+    cleanup()
+    vi.resetAllMocks()
+  })
 
   it('should render properly', () => {
     renderWithClient(<Pokedex />)
