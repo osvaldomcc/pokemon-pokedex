@@ -7,6 +7,7 @@ import { resolve } from 'path'
 const projectRootDir = resolve(__dirname)
 
 export default defineConfig({
+  base: '/pokedex/',
   plugins: [
     react(),
     alias({
