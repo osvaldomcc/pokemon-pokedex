@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import eslintPlugin from 'vite-plugin-eslint'
 import alias from '@rollup/plugin-alias'
 import { resolve } from 'path'
+import { splitVendorChunkPlugin } from 'vite'
 
 const projectRootDir = resolve(__dirname)
 
@@ -19,6 +20,7 @@ export default defineConfig({
       ],
     }),
     eslintPlugin(),
+    splitVendorChunkPlugin()
   ],
   test: {
     globals: true,
