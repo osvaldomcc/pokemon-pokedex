@@ -13,7 +13,7 @@ export const SearchInput = ({ className, labelClassName }: IProps) => {
   const navigate = useNavigate()
 
   const handleChange = (ev: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(ev.target.value)
+    setQuery(ev.target.value.toLowerCase().trim())
   }
 
   const handleSubmit = (ev: React.FormEvent<HTMLFormElement>) => {
