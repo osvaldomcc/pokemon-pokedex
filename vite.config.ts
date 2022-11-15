@@ -7,24 +7,27 @@ import { splitVendorChunkPlugin } from 'vite'
 
 const projectRootDir = resolve(__dirname)
 
-export default defineConfig({
-  base: '/pokedex/',
-  plugins: [
-    react(),
-    alias({
-      entries: [
-        {
-          find: '@',
-          replacement: resolve(projectRootDir, 'src'),
-        },
-      ],
-    }),
-    eslintPlugin(),
-    splitVendorChunkPlugin()
-  ],
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: './src/test/setup.ts',
-  },
+export default defineConfig(({mode}) => {
+
+  return {
+    base: mode === 'development' ? '/' : '/pokemon-pokedex/',
+    plugins: [
+      react(),
+      alias({
+        entries: [
+          {
+            find: '@',
+            replacement: resolve(projectRootDir, 'src'),
+          },
+        ],
+      }),
+      eslintPlugin(),
+      splitVendorChunkPlugin()
+    ],
+    test: {
+      globals: true,
+      environment: 'jsdom',
+      setupFiles: './src/test/setup.ts',
+    },
+  }
 })
