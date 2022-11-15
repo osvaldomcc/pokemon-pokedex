@@ -2,7 +2,7 @@
 
 #### This site was built using [Pokemon API](https://pokeapi.co/).
 
-#### You can see a demo [here](https://github.com/osvaldomcc/pokedex).
+#### You can see a demo [here](https://osvaldomcc.github.io/pokemon-pokedex/).
 
 ![This is an image](/src/assets/pikachu.svg)
 
