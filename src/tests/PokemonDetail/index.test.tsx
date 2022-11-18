@@ -13,14 +13,14 @@ describe('Pokemon', () => {
     renderWithClient(<PokemonDetail />)
   })
 
-  it('should render the loading', async () => {
+  it('should render the loading', () => {
     renderWithClient(<PokemonDetail />)
-    await screen.findByTestId('loading')
+    screen.getByTestId('loading')
   })
 
-  it('should render the search', async () => {
+  it('should render the search', () => {
     renderWithClient(<PokemonDetail />)
-    await screen.findByRole('textbox')
+    screen.getByRole('textbox')
   })
 
   it('should render the search', async () => {
