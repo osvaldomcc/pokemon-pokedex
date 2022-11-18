@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, screen, waitFor } from '@testing-library/react'
+import { cleanup, screen, waitFor } from '@testing-library/react'
 import user from '@testing-library/user-event'
 import { describe, it, vi } from 'vitest'
 import { renderWithClient } from '@/helpers/testUtils'
